@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/style.css">
+  <script src="scripts/main.js" defer></script>
+  <title>simple calc for bakery v1.0</title>
+</head>
+<body>
+
+  <header class="header">
+    
+  </header>
+  <main class="container">
+
+     <div class="modal">
+    <p class="close_modal_elem">x</p>
+    <h2>Краткое описание технологического процесса</h2>
+    <p class="modal_description">
+ 
+</p>
+  <div class="modalButtons">
+    <button class="okeyModalBtn">Понятно</button>
+    <button class="readmoreModalBtn">Подробнее</button>
+  </div>
+    </div>
+
+    <section class="products-list">
+      <h1 class="products-list-title">
+        Список технологических карт продукции
+      </h1>
+      <div class="cards-container">
+
+        
+
+      <!-- <div class="card-product">
+        <div class="card-image">
+          <img src="https://avatars.mds.yandex.net/i?id=f1ffc7e7623bc154c5d4d24a9353f340e438b504-8497218-images-thumbs&n=13" width="300" height="200" alt="" class="card-product-img">
+        </div>
+        <h2 class="card-product-name">Хлеб белый{TEST_CARD}</h2>
+        <p class="card-product-description">
+          Хлеб белый классическая рецептура на закваске Хлеб белый классическая рецептура на закваске
+        </p>
+        
+          <button class="open-card" data-idd="01">
+          Открыть карточку
+        </button>
+        
+      </div> -->
+
+           <div class="card-product">
+        <div class="card-image">
+          <img src="https://milkalliance.com.ua/blog/media/k2/items/cache/2448909041eb1b59b4b28c16cb918292_M.jpg" width="320" height="200" alt="croissant" class="card-product-img">
+        </div>
+        <h2 class="card-product-name">Круассан Французский</h2>
+        <p class="card-product-description">
+          Французский круассан по классической рецептуре
+        </p>
+        
+          <button class="open-card" data-idd="04">
+          Открыть карточку
+        </button>
+        
+      </div>
+
+            <div class="card-product">
+        <div class="card-image">
+          <img src="https://media.istockphoto.com/id/178462137/ru/%D1%84%D0%BE%D1%82%D0%BE/%D0%BA%D1%80%D1%83%D0%B0%D1%81%D1%81%D0%B0%D0%BD-%D0%B8%D0%B7%D0%BE%D0%BB%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD-%D0%BD%D0%B0-%D0%B1%D0%B5%D0%BB%D0%BE%D0%BC.jpg?s=612x612&w=0&k=20&c=zcRqdv8MHbTjHbEu0017HIVfWKlw2ptp5tfZjraOWoQ=" width="320" height="200" alt="croissant-butter" class="card-product-img">
+        </div>
+        <h2 class="card-product-name">Круассан Французский Сливочный 5-ти слойный</h2>
+        <p class="card-product-description">
+          Французский круассан по классической рецептуре на сливочном масле
+        </p>
+        
+          <button class="open-card" data-idd="05">
+          Открыть карточку
+        </button>
+        
+      </div>
+
+
+
+      <div class="card-product not-valid">
+        <div class="card-image">
+          <img src="./pics/borodino.jpeg" width="300" height="200" alt="" class="card-product-img">
+        </div>
+        <div class="description-container">
+        <h2 class="card-product-name">Хлеб Бородинский</h2>
+        <p class="card-product-description">
+          Классическая рецептура бородинского хлеба на закваске.
+        </p>
+        <button class="open-card" data-idd="02">
+          Открыть карточку
+        </button>
+        </div>
+      </div>
+
+
+      <div class="card-product not-valid">
+        <div class="card-image">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuQtzqPpSXV32FqUoCWRyDeHIWYJTNv0_uLXJ_4vubTs06Q-qOxjDGjnld7gWAkSny-c4&usqp=CAU" width="300" height="200" alt="" class="card-product-img">
+        </div>
+
+        <div class="description-container">
+
+        <h2 class="card-product-name">Хлеб Дарницкий</h2>
+        <p class="card-product-description">
+          Дарницкий хлеб бездрожжевой на закваске
+        </p>
+        <button class="open-card" data-idd="03">
+          Открыть карточку
+        </button>
+
+        </div>
+
+      </div>
+
+      </div>
+
+
+  
+
+    </section>
+
+    <div class="content-product">
+      <div class="content-title">
+        <h1 class="content-title-item">
+          Карточка калькуляции продукта:
+        </h1>
+      </div>
+      <div class="ingredients ingredients-wrapper">
+        <!-- <h1 class="product-title">Хлеб белый</h1>
+        <img src="https://avatars.mds.yandex.net/i?id=f1ffc7e7623bc154c5d4d24a9353f340e438b504-8497218-images-thumbs&n=13" alt="Хлеб белый" class="product-image" width="300" height="200">
+
+        <div class="product-count">
+          1
+        </div>
+
+        <input type="text" class="change-count-input">
+
+        <button class="change-count">изменить кол-во булок</button>
+
+        <h2 class="product-elem-name">
+          Рецептура продукта:
+        </h2>
+
+        <li class="ingredient-elem">мука
+           <span class="count flour-count">300</span> 
+          </li>
+
+            <li class="ingredient-elem">сахар
+           <span class="count sugar-count">100</span> 
+          </li>
+
+            <li class="ingredient-elem">вода
+           <span class="count water-count">400</span> 
+          </li> -->
+       
+      </div>
+      <button class="back-to-list">
+        <a href="#" class="back-to-list-elem">
+          Назад к списку
+        </a>
+      </button>
+    </div>
+  </main>
+</body>
+</html>
+

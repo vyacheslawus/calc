@@ -1,0 +1,409 @@
+* {
+  box-sizing: border-box;
+ 
+}
+
+body { 
+  font-family: 'Roboto', sans-serif;
+}
+
+.container {
+  margin: 0;
+  }
+
+.content-product { 
+  flex-direction: column;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: -90;
+ 
+}
+
+.content-product.open {
+  display: flex;
+}
+
+.item-product__description {
+  margin-top: 2px;
+}
+
+.total-price-firstly {
+  list-style-type: none;
+}
+
+.total-price-secondly {
+  color: red;
+  list-style-type: none;
+}
+
+.products-list.hide {
+  display: none;
+}
+
+/* CARD GOODS */
+.products-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.ingredients-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0px;
+  padding-top: 0px;
+  
+  padding: 10px;
+  align-items: flex-start;
+}
+
+.ingredient-elem {
+  
+  list-style-type: disc;
+}
+
+.sum-elem {
+  color: red;
+  font-weight: bold;
+}
+
+.spread-elem {
+  list-style-type: disc;
+  color: black;
+ 
+}
+
+.cards-container { 
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px 30px;
+}
+
+.card-product-img {
+  object-fit: cover;
+  border-radius: 0px;
+}
+
+.count-elements { 
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  
+}
+
+.product-count { 
+  
+  font-size: 20px;
+  color: black;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+.count-elements input {
+  border-radius: 7px;
+  line-height: 30px;
+  border: 0.5px solid rgb(108, 106, 106);
+}
+
+.count-elements button { 
+  line-height: 30px;
+  width: 220px;
+  margin-top: 20px;
+  cursor: pointer;
+  background-color: rgb(107, 107, 107);
+  border: 0;
+  border-radius: 4px;
+  color: white;
+}
+
+.count-elements button:hover {
+  opacity: 50%;
+}
+
+.product-image {
+  object-fit: cover;
+  border-radius: 10px;
+  border: 2px dashed gray;
+}
+.card-product { 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 4px;
+  max-width: 380px;
+  padding: 0;
+  border: 1px solid rgb(70, 184, 222);
+  
+}
+
+.card-product-name {
+  text-align: right;
+}
+
+.card-image img { 
+  object-fit: cover;
+  width: 100%;
+
+}
+
+.open-card {
+  border: 0;
+  padding: 10px;
+  width: 100%;
+  color: rgb(246, 246, 246);
+  border-bottom: 4px;
+  margin-bottom: 0;
+  height: 80px;
+  font-size: 20px;
+  background-color: rgb(70, 184, 222);
+  
+}
+
+.card-product-name, .product-title {
+  text-align: center;
+}
+
+.description-container {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-end;
+}
+
+.card-product-description {
+  padding-left: 10px;
+  pad
+}
+
+.open-card button { 
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.count {
+  color: rgb(97, 144, 183);
+  font-weight: bold;
+}
+
+.count.active { 
+  color: red;
+  font-weight: bold;
+  list-style-type: symbols();
+}
+
+.not-valid {
+  filter: (brightness(50%))
+}
+
+.back-to-list { 
+  background-color: transparent;
+  border: 1px solid grey;
+  border-radius: 5px;
+  padding: 8px;
+  text-decoration: none;
+  line-height: 30px;
+  cursor: pointer;
+  width: 100%;
+  max-width: 500px;
+}
+
+.back-to-list:hover {
+  background-color: rgb(70, 184, 222);
+}
+
+.back-to-list-elem {
+  text-decoration: none;
+  color: black;
+}
+
+.refresh-card { 
+  line-height: 30px;
+  width: 220px;
+  margin-top: 20px;
+  cursor: pointer;
+  background-color: rgb(29, 159, 17);
+  border: 0;
+  border-radius: 4px;
+  color: white;
+  display: block;
+}
+
+.refresh-card.hide {
+  opacity: 30%;
+  background: red;
+  cursor: not-allowed;
+  display: none;
+}
+
+.ingredients-wrapper {
+  position: relative;
+}
+
+.open_modal_btn {
+  line-height: 30px;
+  width: 220px;
+  margin-top: 20px;
+  cursor: pointer;
+  background-color: rgb(62, 75, 106);
+  border: 0;
+  border-radius: 4px;
+  color: white;
+}
+
+.modal {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  overflow: scroll;
+  background-color: rgb(220, 220, 220);
+  color: black;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  top:50%;
+  left: -100%;
+  margin-left: -300px;
+  margin-top: -300px;
+  z-index: 100;
+
+}
+
+.active_modal {
+  left: 50%;
+  transition: all 0.5s ease-out;
+  opacity: 100%;
+}
+
+.modal_description { 
+  text-align: start;
+}
+
+.modalButtons {
+  padding: 0;
+  margin: 0;
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.okeyModalBtn {
+  width: 250px;
+  line-height: 32px;
+  background-color: rgb(57, 160, 93);
+  border: none;
+  border-radius: 5px;
+  margin-right: 20px;
+}
+.readmoreModalBtn {
+  width: 250px;
+  line-height: 32px;
+  background-color: rgb(216, 202, 8);
+  border: none;
+  border-radius: 5px;
+}
+
+.okeyModalBtn:hover {
+  opacity: 80%;
+  cursor: pointer;
+}
+
+.close_modal_elem {
+  position: sticky;
+  right: 0;
+  top: 0;
+  padding: 10px;
+  margin-top: 0;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.516);
+  margin-bottom: 0;
+  
+}
+
+.readmoreModalBtn:hover {
+  opacity: 50%;
+  cursor: pointer;
+}
+
+.color_of_wrapper {
+  filter: brightness(50%);
+}
+
+
+@media (max-width: 600px) {
+
+.modal {
+  padding-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  position: absolute;
+  width: 300px;
+  height: 600px;
+  overflow: scroll;
+  background-color: rgb(220, 220, 220);
+  color: black;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  top:50%;
+  left: -100%;
+  margin-left: -150px;
+  margin-top: -300px;
+  z-index: 100;
+  
+}
+
+.active_modal {
+  left: 50%;
+  top: 10;
+  margin-top: -160px;
+  transition: all 0.5s ease-out;
+  opacity: 100%;
+}
+
+.modalButtons {
+  flex-direction: column;
+}
+
+
+  .card-image img { 
+  object-fit: cover;
+  width: 355px;
+
+}
+
+  .cards-container { 
+
+  display: flex;
+  flex-direction: column;
+}
+
+.content-title-item {
+  text-align: center;
+  padding: 6px;
+  font-size: 20px;
+  display: none;
+
+}
+
+.back-to-list {
+  background-color: rgb(70, 184, 222);
+  font-size: 20px;
+
+}
+
+.back-to-list a {
+  color: white;
+}
+
+
+}
